@@ -9,8 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container'
-
-
+import LinkIcon from '@material-ui/icons/Link';
 const List = (props) => {
   const { repos } = props;
   const StyledTableCell = withStyles((theme) => ({
@@ -50,6 +49,14 @@ const List = (props) => {
       return id;
   }
  }
+ function LivroClick({ id }){
+  const Url = 'https://bookplay.com.br/conteudo/'+id;
+
+   return (
+    <a href={Url} target="CodLivro" rel="noopener" color="inherit">  
+        <LinkIcon />
+    </a>);
+ }
   const classes = useStyles();
   if (!repos || repos.length === 0) return <p>Sem resposta da consulta, desculpa.</p>;
   return (
@@ -61,8 +68,10 @@ const List = (props) => {
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Cod Livro</StyledTableCell>
+                  <StyledTableCell align="right"></StyledTableCell>
                   <StyledTableCell align="right">Cod Conteudo</StyledTableCell>
                   <StyledTableCell align="right">Nome</StyledTableCell>
+                  
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -72,8 +81,12 @@ const List = (props) => {
           <StyledTableCell component="th" scope="row">
             {repo.CodLivro}
           </StyledTableCell>
+          <StyledTableCell align="right">
+            <LivroClick key={repo.CodLivro} id={repo.CodLivro} />
+          </StyledTableCell>
           <StyledTableCell align="right"><DescConteudo key={repo.CodConteudo} id={repo.CodConteudo} /></StyledTableCell>
           <StyledTableCell align="right">{repo.Nome}</StyledTableCell>
+          
         </StyledTableRow>
 
         );
