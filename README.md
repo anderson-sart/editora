@@ -1,8 +1,7 @@
-Primeiro projeto react, desenvolvendo a alguns anos com vue + vuetify
-Apesar de algumas duvidas, por ja ter desnvolvido com vue acredito que com pouco tempo.
-Possivel desenvolver com a nova linguagem.
-Devido a semana ter palestras a semana toda consegui chegar ate a leitura do webservice.
-E o filtro por tipos.
+Primeiro projeto react, desenvolvendo a alguns anos com vue + vuetify.
+
+Apesar de algumas duvidas para implementar, mas por ja ter desenvolvido com vue acredito que consegui programar em react.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
